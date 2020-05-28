@@ -1,0 +1,19 @@
+header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  color: aliceblue;
+  background-color: blueviolet;
+  text-align: center;
+}
+/* span {
+  border: 1px solid #000;
+} */
+/* .bg-light{
+  background-color: black !important;
+}
+.nav-link{
+  color: antiquewhite !important;
+} */

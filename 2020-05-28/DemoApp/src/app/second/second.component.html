@@ -1,0 +1,17 @@
+<h3>This is from second component</h3>
+<div style="width: 450px; height: 450px; border: 1px solid #000;"><br>
+  <div style="width: 450px; height: 20px; text-align: center">Hello, {{parentData}} 1+2+3 = {{ 1+2+3}}</div>
+  <div style="width: 200px; height: 200px; border: 1px solid #000; text-align: center; float: left">{{leftChild}}</div>
+  <div class="myClass">{{('Akhil'.length<10) ? 'Yes this is true' : 'No this is false'}}</div><br>
+  <div class="myClass1">
+    <div style="margin-top: 20px;height: 200px; text-align: center;">
+      <input type="text" value={{inputValue}}>
+      <button [disabled]='inputValue.length<10'>Click me!</button>
+      <button disabled="{{inputValue.length<10}}">Click me!</button><br>
+      <!-- <img src='https://images.pexels.com/photos/45201/{{imageName1}}' height="200px" width="200px"/> -->
+      User Input: <input type="text" [(ngModel)]='twoWay'><br>
+      <span>Data = {{twoWay}}</span><br><span>Length = {{twoWay.length}}</span><br>
+      <button [disabled]='twoWay.length<10'>Click me!</button>
+    </div>
+  </div>
+</div>

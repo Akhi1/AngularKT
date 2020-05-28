@@ -1,0 +1,25 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+installing and setting up bootstrap, jquery into angular application without using cdn (which we did yesterday) npm install bootstrap jquery add the following lines in styles and scripts array in angular.json
+
+"styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+          ],
+"scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+          ]
+
+nested ngFor detailed explanation with sample data (nested array of objects) link to sample json data for you to practice : https://gist.githubusercontent.com/Akhi1/f28823077d8366fabb505f99c7fc1dda/raw/78d7dacea77058630c5f0837affbda6556b1af98/employees.json displayed details of specific employee on button click within the same component and in different containersintroduction to basic routing where we discussed how to route between components by adding routes to app-routing.module.ts file as shown below
+
+const routes: Routes = [
+        { path: '', component: EmployeesComponent },         
+		{ path: 'first', component: FirstComponent },
+        { path: 'second', component: SecondComponent },
+        { path: 'main', component: MainComponent }
+	]
+
+** Tomorrow we will use all the concepts we used so far this week including routing and create project which pass student data through route parameter and then load all his details in the next page using event binding (click) 
+
+Please keep in touch if you have any queries regarding the concepts discussed in any session.
