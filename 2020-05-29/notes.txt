@@ -1,0 +1,44 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed with example how to pass data between components using angular routing add following to app-routing.module.ts file
+
+{ path: 'employees/:guy', component: EmployeesComponent },
+
+route to the specified link with data attached to it as uri params
+
+<button routerLink="/employees/{{namevariable}}">Route</button> 
+<!---- or ---->
+<button routerLink="/employees/Martin">Route</button>
+
+and to capture the route parameter data using ActivatedRoute, add the following to contructor and ngOnInit functions
+
+import { ActivatedRoute } from '@angular/router';
+
+constructor(private route: ActivatedRoute) { } 
+
+ngOnInit(): void {    
+	this.route.params.subscribe(response =>{      
+	// this.fetchedName = paramdata['guy'];      
+	this.fetchedName = response.guy;      
+	console.log(this.fetchedName);    
+	});  
+	// our global variable 
+	fetchedName;
+
+discussed how to redirect routes in case of incorrect path
+{ path: 'fist', redirectTo: '/first' },
+
+discussed how to create wild card routes in case of unknown route links  
+{ path: '**', component: PagenotfoundComponent }
+
+discussed the different types of requesting a service (uri params, query params, post body) 
+
+Please try to complete the application (we have started today) before our next session. It will help you apply each concept we discussed through this whole week. I will also provide a url to studentsdata(array object) we have created today which you can use for the assignment project. 
+
+Also, please keep in touch in case you have any queries regarding the concepts discussed in any session so far.
+
+Please find the link to download/watch recorded video of today's session.
+https://drive.google.com/drive/folders/1Q40YjVJlP2AU5Fhe0T1xTELwM5zf2_SY 
+
+Github Link to code (repository).
+https://github.com/Akhi1/AngularKT

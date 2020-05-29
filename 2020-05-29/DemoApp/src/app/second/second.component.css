@@ -1,0 +1,7 @@
+
+.myClass{
+  width: 200px; height: 200px; border: 1px solid #000; text-align: center; float: right
+}
+.myClass1{
+  margin-top: 20px; padding-top:20px ;width: 450px; height: 150px; border: 1px solid #000; text-align: center; float: left;
+}
