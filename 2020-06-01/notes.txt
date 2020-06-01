@@ -1,0 +1,31 @@
+Hello guys,
+
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed on how to send and retrieve multiple data variables through routing uri params and capture them and store in separate variables
+
+created a simple web application using the static studentdata provided in earlier session with the following components flow
+
+departments (list of departments in data) > sections (list of sections department wise) > list (list of students based on department  and section passed) > details (details card including individual student data from the studentid received from previous component route)
+
+app-routing.ts
+  { path: 'departments', component: DepartmentsComponent },
+  { path: 'sections', component: SectionsComponent },
+  { path: 'sections/:dept', component: SectionsComponent },
+  { path: 'list', component: ListComponent },
+  { path: 'list/:dept/:sec', component: ListComponent },
+  { path: 'details', component: DetailsComponent },
+  { path: 'details/:id', component: DetailsComponent }
+
+different syntax used for routerLink on button click
+ routerLink="/details/{{item.studentid}}"
+<!-- OR -->
+ [routerLink]="['/details',item.studentid]"
+
+discussed with example on loading dynamic css properties using ngStyle
+[ngStyle]="{'background-color':item.studentname.length>3?'green':'gray'}"
+  discussed with example on loading dynamic css properties using ngClass (we can also load out custom class instead of bootstrap class)
+[ngClass]="{'bg-primary':item.studentname.length>3, 'myClass':item.studentname.length<=3}
+
+
+Also, please keep in touch in case you have any queries regarding the concepts discussed in any session so far.
