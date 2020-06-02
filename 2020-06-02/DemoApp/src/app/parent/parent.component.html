@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4 border bg-light">
+      <p>Parent</p>
+      <p>Parent sending data : Hello child dude</p>
+      <p>Received data from child : {{childMessage}}</p>
+    </div>
+    <div class="offset-2 col-6 border bg-light">
+      <app-child [messageFromParent]="parentMessage" (messageToParent)="childMessage=$event"></app-child>
+      <!-- <input [(input)] />
+      <button (click)="myfunction(inputData)">Button</button> -->
+    </div>
+  </div>
+</div>

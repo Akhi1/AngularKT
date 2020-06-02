@@ -1,0 +1,30 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed routing using the Router module that angular has to offer
+
+for this we add (click) event binding for a button as follows
+
+	<button [disabled]='twoWay.length>10' (click)="routeMe(twoWay)">Click me!</button>
+
+then within the componet.ts file we import the Router module
+
+	import { Router } from '@angular/router';
+
+and we call the navigate() function of Router module within routeMe() custom function
+
+    this.route.navigate(['/employees',data]
+
+discussed different syntax of ngStyle and ngClass i.e., [style] and [class]
+
+creating components (nested) as parent and child and nesting child within the parent component
+
+passed data to child from parent component using @Input() decorator
+
+passed data from child to parent component using @Output() decorator and EventEmitter class
+
+will discuss about data passing/communication between sibling components (tomorrow session)
+
+will discuss about creating service class and making REST api calls (tomorrow session)
+
+
+Also, please keep in touch in case you have any queries regarding the concepts discussed in any session so far.
