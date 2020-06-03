@@ -1,0 +1,20 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed passing data from child to parent using @viewChild() decorator and ngAfterViewInit()
+
+since the new data we picked up from child component cannot update the just initialised variable in parent component, we have used the detectChanges() of ChangeDetectorRef as a workaround (also search online to solve the issue using a different approach)
+
+discussed how to pass data using a service class (data.service.ts)
+
+used BehaviourClass from Rxjs to broadcast data and access/subscribe the data from different/any component across the project src
+
+we will discuss how to make service calls using this service class we have created in today's session then use HttpClient
+
+Please try to practice Rxjs library components as much as possible
+
+Here are some useful docs to get started:
+https://rxjs-dev.firebaseapp.com/guide/overview 
+https://rxjs-dev.firebaseapp.com/api/index/class/BehaviorSubject 
+https://angular.io/guide/rx-library
+
+Also, please keep in touch in case you have any queries regarding the concepts discussed in any session so far.
