@@ -1,0 +1,19 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed about predefined pipes provided by angular
+
+created custom pipes using ng generate pipe pipename
+
+customised transform() based on requirement of th pipe.
+
+created a custom pipe that squares the input number if the number is even and cubes otherwise
+
+created a string pipe with parameters that returns default image url of no image url is provided by the use
+
+will discuss about HttpClient module and make api calls (will discuss throughout tomorrow's session)
+
+we will use sample data (https://jsonplaceholder.typicode.com/) to mimic the services
+
+Please go through the documentation to read more about pipes: https://angular.io/guide/pipes
+
+Also, please keep in touch in case you have any queries regarding the concepts discussed in any session so far.

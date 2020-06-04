@@ -1,0 +1,23 @@
+
+<div class="container border">
+  <div class="row p-2 border">
+    <div class="col-4 border bg-light">
+      <div class="row m-2 w-100 border" *ngFor="let item of employeedata">
+        <span class="w-75">{{item.name}}</span>
+        <button class="btn btn-sm btn-primary" (click)=fetchName(item.name)>details</button>
+      </div>
+    </div>
+    <div class="offset-1 col-7 border bg-light">
+      <div class="row w-100" *ngFor="let item of employeedata">
+        <span *ngIf="item.name==fetchedName">
+          <span *ngFor="let item2 of item.address">
+            Street = {{item2.street}}<br>
+            City = {{item2.city}}<br>
+            Country = {{item2.country}}<br>
+            Pincode = {{item2.pincode}}<br>
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

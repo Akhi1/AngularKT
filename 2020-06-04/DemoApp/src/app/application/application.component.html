@@ -1,0 +1,36 @@
+<div class="container">
+  <h2>Pipes In Angular</h2>
+  <div class="row border-top mb-4 mb-4">
+    <div class="col-6 border bg-light mb-4">
+      <h4>Predefined Pipes</h4>
+      <hr>
+      <p>{{text | lowercase}}</p>
+      <p>{{text | uppercase}}</p>
+      <p>{{text | titlecase}}</p>
+
+      <p>{{someNumber | currency}}</p>
+      <p>{{someNumber | currency:'EUR'}}</p>
+
+      <p>{{someNumber | number:'4.4'}}</p>
+      <p>{{myjson | json}}</p>
+      <!-- JSON.stringify(myjson); -->
+      <p>{{someNumber1 | percent}}</p>
+      <p>{{todayDate}}</p>
+      <p>{{todayDate | date}}</p>
+      <p>{{todayDate | date:'dd/MM/y'}}</p>
+      <p>{{todayDate | date:'longTime'}}</p>
+
+      <p>{{text | lowercase | slice:0:-3}}</p>
+      <p>{{text.length>15 ? (text | slice:0:15 | titlecase) : (text | titlecase)}}...<a href="#">readmore</a></p>
+
+    </div>
+    <div class="offset-1 col-5 border bg-light">
+      <h4>Custom Pipes</h4>
+      <hr>
+      <p>{{someNumber | square}}</p>
+      <!-- <img [src]=" imgUrl | defaultimg:'https://cdn6.f-cdn.com/contestentries/1376995/30494909/5b566bc71d308_thumbCard.jpg' " height="200px" width="200px"> -->
+      <img [src]=" imgUrl | defaultimg" height="200px" width="200px">
+    </div>
+  </div>
+  <div class="row p-4"></div>
+</div>
