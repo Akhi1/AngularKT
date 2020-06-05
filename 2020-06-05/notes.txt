@@ -1,0 +1,15 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed about service calls, how to register a service, create instance and call the service file
+
+discussed about HttpClientModule import in app.module > imports[ HttpClientModule ] array and instance of HttpClient in app.service.ts
+
+discussed about various get methods including uri params and query params with string concatenation using ${} and global url setup
+
+created an application that makes a http service call and displays response array of objects  [{ "key :"value}] 
+
+used ngFor and ngIf to iterate through the data and display them on a seperate section of the container
+
+will discuss about post, put, delete methods from within service file (will discuss in next session)
+
+Also, please keep in touch in case you have any queries regarding the concepts discussed in any session so far.

@@ -1,0 +1,18 @@
+
+<div class="container border">
+  <div class="row border m-4" style="height: 400px">
+    <div class="col border bg-danger">
+      <button class="btn btn-primary mx-2" (click)="offButton1 = !offButton1">Switch2</button>
+      <button class="btn btn-primary" (click)="offButton2 = !offButton2">Switch3</button>
+    </div>
+    <div *ngIf="offButton1" class="col border bg-success">
+      <div></div>
+      <span></span>
+    </div>
+    <div *ngIf="offButton2" class="col border bg-primary">
+      <div *ngFor="let item of data" class="bg-danger">
+        <p>{{item.name}}</p>
+      </div>
+    </div>
+  </div>
+</div>
