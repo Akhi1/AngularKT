@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4 border bg-light">
+      <p>Parent</p>
+      <p>Parent sending data : Hello child dude</p>
+      <p>Received data from child : {{childMessage}}</p>
+      <p>Received data from child via ViewChild : {{viewChildMessage}}</p>
+    </div>
+    <div class="offset-2 col-6 border bg-light">
+      <app-child [messageFromParent]="parentMessage" (messageToParent)="childMessage=$event"></app-child>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 border bg-light mt-2">
+      <app-sibling></app-sibling>
+      <p>Subscribed data : {{subscribedMessage.name}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row p-4">
+
+    <div class="col-2"></div>
+    <div class="col-8 bg-light border p-4">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label>UserID</label>
+            <!-- <input type="number" class="form-control" (input)="getuserid($event)"> -->
+            <input type="number" class="form-control" (input)="userid=$event.target.value">
+          </div>
+          <div class="form-group col-md-6">
+            <label>ID</label>
+            <input type="number" class="form-control"  (change)="id=$event.target.value">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" class="form-control" placeholder="please enter the title" (change)="gettitle($event.target.value);">
+        </div>
+        <div class="form-group">
+          <label>Body</label>
+          <input type="text" class="form-control" placeholder="please enter the body" (input)="body=$event.target.value">
+        </div>
+        <p *ngIf="savedResponse" class="text-success text-weight-bold">Data saved successfully!</p>
+        <div class="row float-right">
+          <button type="reset" class="btn btn-primary rounded-0 m-2" (click)="saveData();">Save</button>
+          <button type="reset" class="btn btn-danger rounded-0 m-2">Reset</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-2"></div>
+  </div>
+
+  <div class="row my-2 bg-light border" *ngFor="let item of postArray" style="height: 200px;">
+    <div class="col-2"></div>
+    <div class="col-3">
+      <p>UserID : </p>
+      <p>ID : </p>
+      <p>Title : </p>
+      <p>Body : </p>
+    </div>
+    <div class="col-5">
+      <p>{{item.userId}}</p>
+      <p>{{item.id}}</p>
+      <p>{{item.title}}</p>
+      <p>{{item.body}}</p>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>

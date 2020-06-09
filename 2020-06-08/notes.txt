@@ -1,0 +1,15 @@
+discussed how to make service call by POST data 
+
+created a form where the user can add data and fetched the data to pass it as parameters to the function
+
+fetched data from input box using event binding like (change), (input)
+
+assigning input data to variable using functions and without using functions
+
+(change) = "variablename = $event.target.value"
+or
+(change / input) = "functionname($event.target.value)"
+
+also printed the response from post data received from server
+
+Also, please keep in touch in case you have any queries regarding the concepts discussed in any session so far.
