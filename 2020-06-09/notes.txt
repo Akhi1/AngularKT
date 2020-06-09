@@ -1,0 +1,18 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed on creating various environments setup like default environment.ts and environment.prod.ts
+
+discussed about how we can create our own production environment file and assign global variables to it
+
+captured the configuration variable like apiUrl to service files and loaded them dynamically
+
+used ng build --enviroment=yourenvname to build the project and create dist folder components
+
+discussed how to install and setup apache tomcat server locally and 
+how to copy the build files to ROOT directly and run the server using startup.bat file
+
+paste the dist folder files to ROOT folder and run the server to see your application running locally on localhost:8080 
+
+create your own environment and configure it in angular.json file then use the option --environment while building (try and execute this on your own) 
+
+Please keep in touch in case you have any queries regarding the concepts discussed in any session so far.

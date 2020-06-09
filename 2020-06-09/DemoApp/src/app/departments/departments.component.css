@@ -1,0 +1,7 @@
+.container {
+  height: 800px;
+}
+.col-6{
+  height: 200px;
+  border: 1px solid black;
+}

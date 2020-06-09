@@ -1,0 +1,71 @@
+<div class="container" *ngIf="false">
+  <h2>Pipes In Angular</h2>
+  <div class="row border-top mb-4 mb-4">
+    <div class="col-6 border bg-light mb-4">
+      <h4>Predefined Pipes</h4>
+      <hr>
+      <p>{{text | lowercase}}</p>
+      <p>{{text | uppercase}}</p>
+      <p>{{text | titlecase}}</p>
+
+      <p>{{someNumber | currency}}</p>
+      <p>{{someNumber | currency:'EUR'}}</p>
+
+      <p>{{someNumber | number:'4.4'}}</p>
+      <p>{{myjson | json}}</p>
+      <!-- JSON.stringify(myjson); -->
+      <p>{{someNumber1 | percent}}</p>
+      <p>{{todayDate}}</p>
+      <p>{{todayDate | date}}</p>
+      <p>{{todayDate | date:'dd/MM/y'}}</p>
+      <p>{{todayDate | date:'longTime'}}</p>
+
+      <p>{{text | lowercase | slice:0:-3}}</p>
+      <p>{{text.length>15 ? (text | slice:0:15 | titlecase) : (text | titlecase)}}...<a href="#">readmore</a></p>
+
+    </div>
+    <div class="offset-1 col-5 border bg-light">
+      <h4>Custom Pipes</h4>
+      <hr>
+      <p>{{someNumber | square}}</p>
+      <!-- <img [src]=" imgUrl | defaultimg:'https://cdn6.f-cdn.com/contestentries/1376995/30494909/5b566bc71d308_thumbCard.jpg' " height="200px" width="200px"> -->
+      <img [src]=" imgUrl | defaultimg" height="200px" width="200px">
+    </div>
+  </div>
+  <div class="row p-4"></div>
+</div>
+
+
+<div class="container">
+  <div class="row p-4">
+    <div class="col-4 bg-light border">
+      <button class="btn bg-primary text-white rounded-0 m-2" (click)=allPosts();>Get All Posts</button><br>
+      <button class="btn bg-primary text-white rounded-0 m-2" (click)=allPostsById();>Get All Posts by Id</button><br>
+      <button class="btn bg-primary text-white rounded-0 m-2" (click)="postData(22, 202, 'yo', 'this is summary');">Post Data</button>
+      <p *ngIf="postResponse">Data posted successfully!</p>
+    </div>
+    <div class="offset-1 col-7 bg-light border" style="height: 450px; overflow-y: scroll">
+
+      <span *ngIf="responseForAllPosts">
+        <div class="row m-2 p-2 border bg-white" *ngFor="let item of responseForAllPosts">
+          <div class="col-12">
+            <div><strong>ID =</strong>{{item.id}}</div>
+            <div><strong>User ID =</strong>{{item.userId}}</div>
+            <div><strong>Title =</strong> {{item.title}}</div>
+            <div><strong>Body =</strong> {{item.body}}</div>
+          </div>
+        </div>
+      </span>
+
+      <span *ngIf="responseForPostsById.length>0">
+        <div class="row m-2 p-2 border bg-white" *ngFor="let item of responseForPostsById">
+          <div class="col-12">
+            <div><strong>ID =</strong>{{item.id}}</div>
+            <div><strong>User ID =</strong>{{item.userId}}</div>
+            <div><strong>Title =</strong> {{item.title}}</div>
+            <div><strong>Body =</strong> {{item.body}}</div>
+          </div>
+        </div>
+      </span>
+  </div>
+</div>
