@@ -1,0 +1,17 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed how to create header and footer component from scratch
+
+steps to install bootstrap and then registering/pointing the css and js files to installation folder in node_modules
+
+basic container creation with bootstrap grid (rows and columns)
+
+added a card component with basic structure and then customise the look and feel based on our interest
+
+discussed about using a service file as dependency injection and access it's values to any component by creating instance of the service
+
+how to create an array of object data in service function return and access the same
+
+practised adding features like widths and heights bootstrap classes and then floating also introduced shadows to cards 
+
+Please keep in touch in case you have any queries regarding the concepts discussed in any session so far.
