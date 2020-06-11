@@ -1,0 +1,17 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed about pseudo classes in css (like :hover, :focus, :active, :after etc.,)
+
+added transitions to css custom classes and how to apply them to only specified attributes of the class
+
+created tabbed nav in bootstrap and added content to switch between tabs using #href
+
+learned all about bootstrap modals and how to customise its structure, change the properties
+
+created application with a card and on button click function called along with the modal reference
+
+used nested modals to switch between modals and hide the parent modal on click
+
+showed how to use ngIf to switch between buttons (used while data sent and received non empty response)
+
+Please keep in touch in case you have any queries regarding the concepts discussed in any session so far.

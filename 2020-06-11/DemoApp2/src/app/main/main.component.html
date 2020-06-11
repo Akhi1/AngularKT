@@ -1,0 +1,194 @@
+<div class="container p-2 border">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a
+        class="nav-item nav-link active"
+        id="nav-home-tab"
+        data-toggle="tab"
+        href="#nav-home"
+        role="tab"
+        aria-controls="nav-home"
+        aria-selected="true"
+        >Home</a
+      >
+
+      <a
+        class="nav-item nav-link"
+        id="nav-profile-tab"
+        data-toggle="tab"
+        href="#nav-profile"
+        role="tab"
+        aria-controls="nav-profile"
+        aria-selected="false"
+        >Profile</a
+      >
+
+      <a
+        class="nav-item nav-link"
+        id="nav-contact-tab"
+        data-toggle="tab"
+        href="#nav-contact"
+        role="tab"
+        aria-controls="nav-contact"
+        aria-selected="false"
+        >Contact</a
+      >
+
+      <a
+        class="nav-item nav-link"
+        id="nav-more-tab"
+        data-toggle="tab"
+        href="#nav-more"
+        role="tab"
+        aria-controls="nav-contact"
+        aria-selected="false"
+        >More</a
+      >
+    </div>
+  </nav>
+
+  <div class="tab-content" id="nav-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="nav-home"
+      role="tabpanel"
+      aria-labelledby="nav-home-tab"
+    >
+      <div class="card shadow rounded-0 m-4" style="width: 18rem;">
+        <img
+          src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title border-bottom">First Card Title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <!-- <a *ngIf="!responsedata" href="#" class="btn btn-primary w-100 customBtn" data-toggle="modal" data-target="#mymodalfailure" (click)="send()">First Modal</a> -->
+          <a *ngIf="!responsedata" href="#" class="btn btn-primary w-100 customBtn" data-toggle="modal" data-target="#mymodalconfirm">First Modal</a>
+          <a *ngIf="responsedata" href="#" class="btn btn-primary w-100 customBtn" data-toggle="modal" data-target="#mymodalsuccess">Second Modal</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="nav-profile"
+      role="tabpanel"
+      aria-labelledby="nav-profile-tab"
+    >
+      <div class="card shadow rounded-0 m-4" style="width: 18rem;">
+        <img
+          src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title border-bottom">First Card Title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary w-100 customBtn">Second Card</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="nav-contact"
+      role="tabpanel"
+      aria-labelledby="nav-contact-tab"
+    >
+      <p>Hello please contact us at something@example.com</p>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="nav-more"
+      role="tabpanel"
+      aria-labelledby="nav-more-tab"
+    >
+      <p>
+        to read more success stories about our organinsation
+        <a href="#">click here</a>
+      </p>
+    </div>
+  </div>
+
+
+
+  <!-- Modal1 -->
+  <div class="modal fade" id="mymodalconfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <button type="button" class="close m-2" data-dismiss="modal" aria-label="Close">
+          <span class="text-danger shadow-0 float-right" aria-hidden="true">&times;</span>
+        </button>
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+        <div class="modal-body">
+          <p>You are about to send the data to the service. Can you confirm this?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="donotsend()" data-dismiss="modal">Abort</button>
+          <button type="button" class="btn btn-success" (click)="send()" data-dismiss="modal">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <!-- Modal2 -->
+    <div class="modal fade" id="mymodalsuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content bg-primary text-white">
+          <button type="button" class="close m-2" data-dismiss="modal" aria-label="Close">
+            <span class="text-white shadow-0 float-right" aria-hidden="true">&times;</span>
+          </button>
+          <!-- <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> -->
+          <div class="modal-body">
+            Data saved successfully!
+          </div>
+          <div class="modal-footer">
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+            <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#mymodalnested">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- nested modal -->
+    <div class="modal fade" id="mymodalnested" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="close m-2" data-dismiss="modal" aria-label="Close">
+            <span class="text-danger shadow-0 float-right" aria-hidden="true">&times;</span>
+          </button>
+          <!-- <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> -->
+          <div class="modal-body">
+            <p>Nested modal</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" (click)="donotsend()" data-dismiss="modal">Abort</button>
+            <button type="button" class="btn btn-success" (click)="send()" data-dismiss="modal">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
