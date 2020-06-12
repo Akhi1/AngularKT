@@ -1,0 +1,14 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed about spinner component in bootstrap
+
+created responsive tables with different types using bootstrap boilerplate code
+
+loaded table with dynamic data from the service and used ngFor to display total number of data in each row (dynamically)
+
+created a modal and added a form to it with post button that posts data to survive
+added spinner to the form modal when post button is clicked and then response is loaded once the loader is stopped
+
+create a login page component which should be displayed when you load the application with empty route " " and when you click login you need to route to whatever first component you want to display. Also make use of the icons provided by bootstrap. Also add logout button or icon somewhere in the menu bar which when clicked should route back to the login page (Assignment for this weekend) 
+
+Please keep in touch in case you have any queries regarding the concepts discussed in any session so far.
