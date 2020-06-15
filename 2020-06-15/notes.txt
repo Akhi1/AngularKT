@@ -1,0 +1,18 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed about structuring the taskboard for BPM project with sidebar and on the right column, add 4 cards of equal size and within each card use either bootstrap card or alert component to clone the ui
+then create a service that send you an array of objects like { titles: "sample", "body": "sample" }
+
+also discussed about passing header to service calls (get, post) using HttpHeaders class instance and using set, get, append functions of HttpHeaders class to append each header key: value
+
+for eTracker project, try storing the base64 image data to a database (or try storing to a global variable) and then create get method (or pass the variable via routing) to retrieve the same to display the image dynamically in the next page (routing) 
+
+about setting the login component for Auth-E project how to display the first component as login and then add another component with header, footer and router-outlet where you display your application
+
+also read/refer about route.navigate() to route instead of routerLink to add conditions around the routing so when the login is failed (in case of wrong credentials), the routing doesn't happen.
+
+Free bootstrap ui examples from official website: https://getbootstrap.com/docs/4.5/examples/
+After downloading the file, location for code of projects shown in the above link: F:\bootstrap-4.5.0.zip\bootstrap-4.5.0\site\docs\4.5\examples
+For BPM project ui reference: https://stacked.nyasha.me/taskboard 
+
+Please keep in touch in case you have any queries regarding the concepts discussed in any session so far.
