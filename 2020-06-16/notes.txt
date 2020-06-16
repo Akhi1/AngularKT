@@ -1,0 +1,18 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed about adding headers(modern procedure) to http calls in angular service calls
+
+discussed about simplebar library used for customised scrolling of tables or any div component you have set fixed size and overflow: auto
+
+discussed on how to install ngx-pagination in angular and 
+also added the library to the table we have already created using dynamic data
+
+implemented these with an example (which you can find in a shared github repo)
+discussed about the queries faced by each while working on their respective projects
+
+try to create a table with some dynamic data loaded from service and then add fixed headers where only table body should be scrolling (try to work on this)
+
+Simple bar library (for customised scrollbar ui): https://www.npmjs.com/package/simplebar 
+ngx-pagination library:  https://www.npmjs.com/package/ngx-pagination
+
+Please keep in touch in case you have any queries regarding the concepts discussed in any session so far.
