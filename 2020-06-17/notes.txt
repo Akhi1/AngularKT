@@ -1,0 +1,15 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed on how to retrieve the token from service and use the service within headers to access the service
+
+used mule cloudhub sample service for example but failed to access through application due to cors issue
+
+created an image gallery by dynamically loading the image tag within cols with exual number of images per row
+
+used simplebar for scrolling with fixed height and also added pagination to display only 6 images per page
+
+setup and used fancybox jquery library to be able to click on the image and zoom it to full page
+
+Fancy apps library (for image zooming): https://fancyapps.com/fancybox/3/ 
+
+Please keep in touch in case you have any queries regarding the concepts discussed in any session so far.
