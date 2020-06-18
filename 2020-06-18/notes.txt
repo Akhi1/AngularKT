@@ -1,0 +1,22 @@
+These are some steps and important links for you to help with the topics we have discussed in today's session
+
+discussed on protecting routes using angular Router Guard service 
+
+used canActivate() for the gatekeeper/validation part
+
+you can create router guard using ng g guard auth
+
+add setter and getter function in service to update the status of the user whether he/she is logged in successfully
+
+then use the setter function to login component to update the status based on the login response (we used activate key from service)
+
+canActivate() in authguard uses the getter to return true or false (whether to allow the user to access specific route he is trying to reach to via url)
+
+based on the status, canActivate will allow/pass the user to specific route
+
+you need to add canActivate auth guard service to routing.ts also like below
+{ path='about' component: AboutComponent canActivate = [AuthGuard] }
+
+discussed all the above concepts using a login page sample project (which you can find in the repo) 
+
+Please keep in touch in case you have any queries regarding the concepts discussed in any session so far.

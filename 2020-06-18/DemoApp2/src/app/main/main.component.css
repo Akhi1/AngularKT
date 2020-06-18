@@ -1,0 +1,20 @@
+/* .container{
+  max-width: 1300px !important;
+} */
+.myshadow {
+  border: 1px solid blue;
+  border-radius: 5px !important;
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.myshadow:hover {
+  border: 2px dotted blue;
+  border-radius: 20px !important;
+  box-shadow: 0 5px 15px rgba(255, 0, 157, 0.2);
+}
+
+.customBtn::hover {
+  background-color: blueviolet !important;
+}
+

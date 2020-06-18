@@ -1,0 +1,244 @@
+<app-header></app-header>
+<div class="container p-2 border">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+        aria-controls="nav-home" aria-selected="true">Home</a>
+
+      <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+        aria-controls="nav-profile" aria-selected="false">Profile</a>
+
+      <a class="nav-item nav-link active" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+        aria-controls="nav-contact" aria-selected="false">Contact</a>
+
+      <a class="nav-item nav-link" id="nav-more-tab" data-toggle="tab" href="#nav-more" role="tab"
+        aria-controls="nav-more" aria-selected="false">Images</a>
+
+      <a class="nav-item nav-link" id="nav-table-tab" data-toggle="tab" href="#nav-table" role="tab"
+        aria-controls="nav-table" aria-selected="false">Table</a>
+    </div>
+  </nav>
+
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class="card shadow rounded-0 m-4" style="width: 18rem;">
+        <img
+          src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+          class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title border-bottom">First Card Title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <!-- <a *ngIf="!responsedata" href="#" class="btn btn-primary w-100 customBtn" data-toggle="modal" data-target="#mymodalfailure" (click)="send()">First Modal</a> -->
+          <a *ngIf="!responsedata" href="#" class="btn btn-primary w-100 customBtn" data-toggle="modal"
+            data-target="#mymodalconfirm">First Modal</a>
+          <a *ngIf="responsedata" href="#" class="btn btn-primary w-100 customBtn" data-toggle="modal"
+            data-target="#mymodalsuccess">Second Modal</a>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <div class="card shadow rounded-0 m-4" style="width: 18rem;">
+        <img
+          src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+          class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title border-bottom">First Card Title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary w-100 customBtn" data-toggle="modal" data-target="#formModal">Second Card</a>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade show active" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+      <button class="btn btn-primary rounded-0" (click)="generateToken('akhil','akhil123')">Login</button>
+
+
+
+    </div>
+    <div class="tab-pane fade px-4" id="nav-more" role="tabpanel" aria-labelledby="nav-more-tab">
+
+      <div class="row"><p class="w-100 font-weight-bold text-center">Image Gallery</p></div>
+      <div data-simplebar style="height: 400px; overflow: auto">
+        <div class="row border p-4">
+          <div class="col-4 mb-4 ml-auto" *ngFor="let item of imageDB | paginate: {itemsPerPage: 6, currentPage: pp}">
+            <a data-fancybox="gallery" href={{item.url}}><img src={{item.url}} alt="..." class="img-thumbnail ml-auto mb-2" height="250px" width="200px"></a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <pagination-controls class="w-100 text-center" (pageChange)="pp = $event"></pagination-controls>
+      </div>
+
+
+
+    </div>
+    <div class="tab-pane fade" id="nav-table" role="tabpanel" aria-labelledby="nav-table-tab" data-simplebar style="height: 200px; overflow: auto">
+
+      <!-- <div class="row"> -->
+        <table class="table table-hover table-sm table-bordered my-4">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Empoyee Name</th>
+              <th scope="col">Job</th>
+              <th scope="col">Company</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr *ngFor="let item of retrievedEmpData | paginate: config"> -->
+            <tr *ngFor="let item of retrievedEmpData | paginate: {itemsPerPage: 5, currentPage: p}">
+              <td>{{item.id}}</td>
+              <!-- <td *ngIf="item.empname.length>5" class="bg-light">{{item.empname}}</td>
+              <td *ngIf="item.empname.length<6">{{item.empname}}</td> -->
+              <td>{{item.empname}}</td>
+              <td>{{item.job}}</td>
+              <td>{{item.company}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- <pagination-controls class="w-100 text-center" (pageChange)="pageChanged($event)"></pagination-controls> -->
+        <pagination-controls class="w-100 text-center" (pageChange)="p = $event"></pagination-controls>
+
+      <!-- </div> -->
+
+    </div>
+  </div>
+
+
+
+  <!-- Modal1 -->
+  <div class="modal fade" id="mymodalconfirm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <button type="button" class="close m-2" data-dismiss="modal" aria-label="Close">
+          <span class="text-danger shadow-0 float-right" aria-hidden="true">&times;</span>
+        </button>
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+        <div class="modal-body">
+          <p>You are about to send the data to the service. Can you confirm this?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="donotsend()" data-dismiss="modal">Abort</button>
+          <button type="button" class="btn btn-success" (click)="send()" data-dismiss="modal">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal2 -->
+  <div class="modal fade" id="mymodalsuccess" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content bg-primary text-white">
+        <button type="button" class="close m-2" data-dismiss="modal" aria-label="Close">
+          <span class="text-white shadow-0 float-right" aria-hidden="true">&times;</span>
+        </button>
+        <!-- <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> -->
+        <div class="modal-body">
+          Data saved successfully!
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal"
+            data-target="#mymodalnested">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- nested modal -->
+  <div class="modal fade" id="mymodalnested" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <button type="button" class="close m-2" data-dismiss="modal" aria-label="Close">
+          <span class="text-danger shadow-0 float-right" aria-hidden="true">&times;</span>
+        </button>
+        <!-- <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> -->
+        <div class="modal-body">
+          <p>Nested modal</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="donotsend()" data-dismiss="modal">Abort</button>
+          <button type="button" class="btn btn-success" (click)="send()" data-dismiss="modal">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- form modal -->
+  <div class="modal" id="formModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title">Post Data</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="text-white" aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form *ngIf="(!postResponse) && (!loading)">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label>UserID</label>
+                <!-- <input type="number" class="form-control" (input)="getuserid($event)"> -->
+                <input type="number" class="form-control" (input)="userid=$event.target.value">
+              </div>
+              <div class="form-group col-md-6">
+                <label>ID</label>
+                <input type="number" class="form-control"  (input)="id=$event.target.value">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Title</label>
+              <input type="text" class="form-control" placeholder="please enter the title" (input)="title=$event.target.value">
+            </div>
+            <div class="form-group">
+              <label>Body</label>
+              <input type="text" class="form-control" placeholder="please enter the body" (input)="body=$event.target.value">
+            </div>
+          </form>
+
+          <div *ngIf="loading" class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+
+          <p *ngIf="postResponse" class="text-success text-weight-bold">Data Added successfully!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="postData()">Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
